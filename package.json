@@ -19,5 +19,8 @@
   "homepage": "https://github.com/baiying1314/guessNumber#readme",
   "devDependencies": {
     "jasmine": "^2.4.1"
+  },
+  "dependencies": {
+    "scanf": "^0.7.2"
   }
 }

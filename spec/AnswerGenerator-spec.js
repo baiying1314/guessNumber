@@ -5,7 +5,7 @@ describe('Answer Generator',()=>{
         const isUnique = (item,index,array)=>{
             return array.lastIndexOf(item) === index;
         }
-        
+
         const answer = AnswerGenerator.generator();
         expect(answer.length).toEqual(4);
         expect(answer.every(isUnique)).toBeTruthy();
