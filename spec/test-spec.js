@@ -6,6 +6,7 @@ describe('guessNumber', ()=> {
         const input = '1234';
         const expectText = '4A0B';
         const testNumber = new CompareNumber(input, result);
+
         expect(testNumber.compareNumber()).toEqual(expectText);
     })
 })
