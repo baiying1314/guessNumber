@@ -1,10 +1,6 @@
 class CompareNumber {
-    constructor(input, result) {
-        this.input = input;
-        this.result = result;
-    }
 
-    compareNumber() {
+    static compareNumber(input, answer) {
         const split = (input)=> {
             return input.split('');
         }
@@ -20,21 +16,14 @@ class CompareNumber {
         }
 
 
-        const inputsArray = split(this.input);
-        const resultsArray = split(this.result);
+        const inputsArray = split(input);
+        const resultsArray = split(answer);
 
         const results_Array = inputsArray.map(inputArray=> {
             const position = inputsArray.indexOf(inputArray)
             const {result_first, result_second} = compare(inputArray, position, resultsArray);
             return {result_first, result_second}
         })
-        // console.log(results_Array);
-        // const result = results_Array.reduce((a, b) => {
-        //     console.log(typeof (a.result_first));
-        //     return {first:a.result_first+b.result_first,second:a.result_second+b.result_second};
-        //
-        // })
-        // console.log(result.first);
         let first = 0;
         let second = 0;
         results_Array.forEach(result_Array=>{

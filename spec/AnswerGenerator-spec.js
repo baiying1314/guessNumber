@@ -6,9 +6,9 @@ describe('Answer Generator',()=>{
             return array.lastIndexOf(item) === index;
         }
         
-        const answer = AnswerGenerator.generate();
+        const answer = AnswerGenerator.generator();
         expect(answer.length).toEqual(4);
         expect(answer.every(isUnique)).toBeTruthy();
-        expect (AnswerGenerator.generate()).not.toEqual(AnswerGenerator.generate());
+        expect (AnswerGenerator.generator()).not.toEqual(AnswerGenerator.generator());
     })
 })
