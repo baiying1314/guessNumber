@@ -9,5 +9,13 @@ describe('guessNumber', ()=> {
 
         expect(testNumber.compareNumber()).toEqual(expectText);
     })
+
+    it('class Comparenumber ----0A4B',()=>{
+            const input = '4321';
+            const expectText = '0A4B';
+            const testNumber = new CompareNumber(input, result);
+
+            expect(testNumber.compareNumber()).toEqual(expectText);
+    })
 })
 
